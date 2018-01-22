@@ -17,10 +17,11 @@ node {
 				dotnet_build();
             }
 
-            stage ("dotnet test") {
+		/** 
+		stage ("dotnet test") {
 				dotnet_test();
             }
-
+		**/
             stage ("dotnet publish") {
 				dotnet_publish();
             }
