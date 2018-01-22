@@ -17,11 +17,6 @@ node {
 				dotnet_build();
             }
 
-		/** 
-		stage ("dotnet test") {
-				dotnet_test();
-            }
-		**/
             stage ("dotnet publish") {
 				dotnet_publish();
             }
