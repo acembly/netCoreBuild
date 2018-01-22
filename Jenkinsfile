@@ -45,8 +45,6 @@ def dotnet_build(){
 def dotnet_publish_iis(){
     dir('Merken.NetCoreBuild.App') {
         sh(script: 'dotnet build Merken.NetCoreBuild.App.csproj /p:DeployOnBuild=true /p:PublishProfile="Web11112 - Web Deploy"  /p:Username="$Web11112" /p:Password="<password removed>"', returnStdout: true);
-        sh(script: 'cp Dockerfile ./obj/Docker/publish', returnStdout: true);
-        sh(script: 'tar zcf netcoreapp.tar.gz -C ./obj/Docker/publish .', returnStdout: true);
     }
 }
 
